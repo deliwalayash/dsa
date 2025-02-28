@@ -11,7 +11,10 @@ int main(){
 
     cin >> year;
 
-    if(year % 4 ==0) cout << "it is a leap year";
+    if( (year % 4 ==0) && (year % 100 !=0) || (year % 400==0) ){
+        
+        cout <<"Its is a leap Year";
+    }
 
     else cout << "it is not a leap year";
     
