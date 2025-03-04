@@ -3,11 +3,16 @@
 using namespace std;
 
 int main(){
-    int i=1;
+    int i=1,num,ans=1;
 
-    while(i <=5){
-        cout << i << " ).hello world" << endl;
+    cout << "input your number ";
+
+    cin >> num;
+  
+    while(i <=num){
+        ans=ans*i;
         i++;
-        i++;
-    }       
+    }   
+    
+    cout << ans;
 }
