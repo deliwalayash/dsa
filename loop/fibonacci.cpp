@@ -13,6 +13,8 @@ int main()
 
     cout << "Fibonacci Series !" << endl;
 
+    cout << first << " " << second << " ";
+
     while (i < num)
     {
         third = first + second;

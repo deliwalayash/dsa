@@ -3,27 +3,36 @@
 using namespace std;
 
 int main(){
-    
-    int num,i=2,isPrime=1;
-    cout << "Enter number ";
    
-    cin >> num;
+    int i,num,flag;
 
-    if(num<=1) isPrime=0;
+  
 
-    else  while(i < num){
-             if(num % i ==0)
-             {
-                isPrime =0;
-                break;
-             }
-             i++;
+    for(num=2;num<=100;num++){
+        flag=1;
+        if(num<=0) {
+            flag =0;
+        }
+    
+        else{
+            for(i=2;i<num;i++)
+            {
+                if(num % i ==0){
+                    flag=0;
+                    break;
+    
+                }
+                
+            }
+        }
+    
+        if(flag==1)
+        {
+            cout<< num << " ";
+        }
+       
+
     }
 
-    if(isPrime)  cout <<"It is a prime number";
-    else cout <<"It is not a prime number";
    
-
-
-    return 0;
 }
