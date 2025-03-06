@@ -19,6 +19,7 @@ int main(){
         if(found == true){  // if we found the number which is not divisible by any number
             cout << num << " "; // then we printed that number
         }
+
     }
     cout << endl; // after that printing a space
 
