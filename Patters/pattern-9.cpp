@@ -4,14 +4,21 @@ using namespace std;
 
 int main(){
     int i,j;
-    int count=1;
+    
 
-    for(i=1;i<=5;i++)
-    {
-        for(j=5;j>=1;j--){
+    for(i=9;i>=1;i-=2)
+    {    
+        for(j=1;j<=i;j+=2){
             cout << j << " ";
-           
+            
         }
+
         cout<< endl;
     }
 }
+
+// 1 3 5 7 9 
+// 1 3 5 7
+// 1 3 5
+// 1 3
+// 1
