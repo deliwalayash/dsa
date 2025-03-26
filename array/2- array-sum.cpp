@@ -27,9 +27,6 @@ int main(){
        
         cout<< sumarr[i] << " ";
     }
-
     cout << endl;
-    
-
     return 0;
 }
