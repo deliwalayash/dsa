@@ -65,6 +65,7 @@ int main(){
                 arr[i] = arr[i+1];
             }
             arr[i] = 0;
+            idx--;
             break;                   
         }
         case 5:{
