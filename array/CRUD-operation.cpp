@@ -59,7 +59,6 @@ int main(){
             int index, i;
             cout <<"Inter Index you want to delete";
             cin >> index;
-            arr[index]=0;
             cout <<"Data Deleted successful" << endl;
             for(i = index; i < size - 1; i++){
                 arr[i] = arr[i+1];
