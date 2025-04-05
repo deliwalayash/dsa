@@ -19,12 +19,13 @@ int main()
 int isPrime(int n)
 {
 
-    
+    int i, j;
    
-    for (int i = 2; i < n; i++)
+    for (i = 2; i < n; i++)
     {
+        cout << "-" << i << "- " << endl;
         bool flag = false;
-        for (int j = 2; j < i; j++)
+        for (j = 2; j < i; j++)
         {
             if (i % j == 0)
             {

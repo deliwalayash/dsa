@@ -22,8 +22,8 @@ int main(){
         cin >> n2;
         cout << "Enter + for Addition:" << endl;
         cout << "Enter - for Subtraction:" << endl;
-        cout << "Enter + for Multiplication:" << endl;
-        cout << "Enter + for Division:" << endl;
+        cout << "Enter * for Multiplication:" << endl;
+        cout << "Enter / for Division:" << endl;
         cout << "Enter % for Modulo:" << endl;
         cout <<"Enter x for exit:" << endl;
 
