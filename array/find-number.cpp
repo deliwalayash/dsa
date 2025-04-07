@@ -8,7 +8,7 @@ int main(){
 
 
 
-     cout <<" Enter the number you want to find:";
+     cout <<"Enter the number you want to find:";
      cin >> n;
 
      size=sizeof(arr)/sizeof(int);
@@ -18,7 +18,8 @@ int main(){
         
        if(arr[i]==n){
         cout << index;
-        return i;
+        break;
+       
        }
       
        index++;
