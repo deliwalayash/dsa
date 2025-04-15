@@ -40,7 +40,7 @@ int main()
     
     Car c1("Swift",100,"White");
     c1.getData();
-    Car c2 = c1; //Shalow Copy
+    Car c2 = c1; //This is Shalow Copy
     c2.getData();
     c1.name="Ertiga";
     c1.getData();

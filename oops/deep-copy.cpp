@@ -25,6 +25,10 @@ Car()
         this->colour = colour;
     }
 
+    Car(Car &obj){
+        
+    }
+
    
 
     void getData()
@@ -33,18 +37,20 @@ Car()
         cout << "Speed:" << this->speed << endl;
         cout << "Colour:" << this->colour << endl;
     }
+    ~Car(){
+        cout <<"Deconstructor is Called";
+    }
 };
 
 int main()
 {
     
     Car c1("Swift",100,"White");
-    c1.getData();
-    Car c2 = c1; //Shalow Copy
-    c2.getData();
-    c1.name="Ertiga";
-    c1.getData();
-    c2.getData();
+   
+    Car &c3=c1;    // this is deep copy
+    c1.name="Wagon R";
+    c1.name="Nexa";
+    c3.getData();
 
     return 0;
 }
