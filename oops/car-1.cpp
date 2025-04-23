@@ -35,7 +35,7 @@ int main(){
     car c[num];
 
     for(i = 0;i < num; i ++){
-        cout <<"Enter "
+        cout <<"Enter ";
     }
 
 

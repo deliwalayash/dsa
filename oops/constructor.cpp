@@ -17,15 +17,13 @@ public:
         this->speed = 0;
         this->colour = "";
     }
-    Car(string name,int speed,string colour)
+    Car(string name, int speed, string colour)
     {
-        cout << "Parameter Constructor initiated:"<<endl ;
+        cout << "Parameter Constructor initiated:" << endl;
         this->name = name;
         this->speed = speed;
         this->colour = colour;
     }
-
-    
 
     void getData()
     {
@@ -37,9 +35,9 @@ public:
 
 int main()
 {
-    
+
     Car c1;
-    Car c2("Swift",100,"White");
+    Car c2("Swift", 100, "White");
     c1.getData();
     c2.getData();
     return 0;
