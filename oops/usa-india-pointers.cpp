@@ -8,7 +8,7 @@ class India{
         void wear(){
             cout <<"Dhoti kurta" << endl;
         }
-        void company(){
+       virtual void company(){
             cout << "TCS & Infosys" << endl;
         }
 };
@@ -27,18 +27,36 @@ class Usa:public India{
 
 int main(){
 
-    India i1;
     Usa u1;
+    India i1;
 
-    Usa *ptr2=&u1;
+    India *ptr =&u1;
 
-    ptr2->wear();
-
-    India *ptr=&u1;
-
+    
+    
     ptr->company();
+    i1.company();
 
-    ptr->wear();
+
+
+
+  
+
+
+    // India i1;
+    // Usa u1;
+
+    // Usa *ptr2=&u1;
+
+    // ptr2->wear();
+
+    // ptr2->company();
+
+    // Usa *ptr=&u1;
+
+    // ptr->company();
+
+    // ptr->wear();
 
     return 0;
 }
