@@ -41,13 +41,23 @@ public:
 int main()
 {
 
-    MyClass m1(5);
+    int size;
+
+    cout << "Enter size of array:";
+    cin >> size;
+
+    MyClass m1(size);
 
     m1.Getvalue();
     m1.Showvalue();
 
     cout << endl
          << sizeof(m1);
+
+    cout << "Size of m1 object: " << sizeof(m1) << " bytes" << endl;
+    cout << "Size of dynamic array: " << size * sizeof(int) << " bytes" << endl;
+    cout << "Total size used: " << sizeof(m1) + size * sizeof(int) << " bytes" << endl;
+
 
     return 0;
 }
