@@ -183,16 +183,18 @@ class Linkedlist{
 
     void reverse(){
         Node *prev=nullptr;
-        Node *curr=head;
+        Node *temp=head;
         Node *next2;
 
-        while (curr != nullptr)
+        while (temp != nullptr)
         {
-            next2=curr->next;
-            curr->next=prev;
-            prev = curr;
-            curr = next2;
+            next2=temp->next;
+            temp->next=prev;
+            prev = temp;
+            temp = next2;
         }
+
+        head= prev;
         
 
     }
