@@ -38,7 +38,6 @@ public:
     bool isempty();
     bool isfull();
     void getsize();
-  
 };
 
 void Stack ::Display()
@@ -78,33 +77,28 @@ void Stack ::peek()
 
 bool Stack ::isempty()
 {
-      if (this->top == -1)
+    if (this->top == -1)
     {
         return true;
-    }else
+    }
+    else
         return false;
-    
 }
 
 bool Stack ::isfull()
 {
-      if (this->top == size -1)
+    if (this->top == size - 1)
     {
         return true;
-    }else
+    }
+    else
         return false;
-    
 }
 
 void Stack ::getsize()
 {
-    cout <<"Size of stack is:" << size;
-  
+    cout << "Size of stack is:" << size;
 }
-
-
-
-
 
 int main()
 {
@@ -155,41 +149,48 @@ int main()
             break;
         }
         case 5:
-        {   
-            if(stack.isempty()){
+        {
+            if (stack.isempty())
+            {
                 cout << "Stack is empty" << endl;
-            }else{
+            }
+            else
+            {
                 cout << "Stack is not empty" << endl;
             }
             break;
         }
         case 6:
-        {   
-            if(stack.isfull()){
+        {
+            if (stack.isfull())
+            {
                 cout << "Stack is full" << endl;
-            }else{
+            }
+            else
+            {
                 cout << "Stack is not full" << endl;
             }
             break;
         }
         case 7:
-        {   
+        {
             stack.getsize();
         }
-      
+
         case 9:
-        {   
-            
+        {
+
             int n;
             cout << "Enter Decimal num:";
 
             cin >> n;
 
             Stack binary(size);
-            while(n > 0){
-                int rem = n %2;
+            while (n > 0)
+            {
+                int rem = n % 2;
                 binary.push(rem);
-                n = n /2;
+                n = n / 2;
             }
             binary.Display();
             break;
