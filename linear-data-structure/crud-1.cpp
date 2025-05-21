@@ -15,7 +15,7 @@ class Node{
 
 class Linkedlist{
     public:
-    Node *head=NULL;
+    Node *head;
     int count;
 
     Linkedlist(){

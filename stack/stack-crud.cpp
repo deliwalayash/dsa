@@ -1,97 +1,104 @@
 #include<iostream>
-
+#include<string>
 using namespace std;
 
-class Queue{
+class Stack{
     private:
     int *arr;
-    int front;
-    int rear;
-    int count;
+    char*arr2;
+    int top;
     int size;
-
+    int count;
     public:
-    Queue(int data){
-        this->arr=new int[data];
-        this->front=-1;
-        this->rear=-1;
+
+    Stack(int size){
+        this->arr=new int[size];
+        this->size=size;
         this->count=0;
+        this->top=-1;
     }
-    void Enque(int data);
-
-
-    void Deque();
-    void Display();
-};
-
-void Queue::Enque(int data){
-    if(this->count == size){
-        cout <<"Queue is Full:";
-        return;
+    Stack(){
+        this->arr2=new char[100];
+        this->count=0;
+        this->top=-1;
     }
-
-    if(this->front == -1 && this->rear==-1){
-        this->front++;
-        this->rear++;
-        this->arr[this->rear]=data;
+   
+    void push(int data){
+        if(count == size){
+            cout <<"Stack is full:" << endl;
+            return;
+        }
+        this->top++;
+        arr[this->top]=data;
         this->count++;
     }
-    else{
-        this->rear++;
-        this->arr[this->rear]=data;
+    void push(char data){
+        if(count == size){
+            cout <<"Stack is full:" << endl;
+            return;
+        }
+        this->top++;
+        arr2[this->top]=data;
         this->count++;
+    }
+    void pop(){
+        if(count == 0){
+            cout <<"Stack is empty:->" << endl;
+            return;
+        }
 
+        arr[this->top]=0;
+        this->top--;
+        this->count--;
+    }
+    void pop2(){
+        if(count == 0){
+            cout <<"Stack is empty:->" << endl;
+            return;
+        }
+
+        arr2[this->top]=0;
+        this->top--;
+        this->count--;
+    }
+    void display(){
+        if(count == 0){
+            cout <<"Stack is empty:" << endl;
+            return;
+        }
+
+        for(int i = this->top ; i >=0 ; i--){
+            cout <<arr[i] <<" ";
+        }
+        cout << endl;
+    }
+    char Gettop(){
+        return this->arr2[top];
     }
 };
-
-void Queue::Deque(){
-
-    if(this->count == 0){
-        cout <<"The queue is empty:";
-    }
-
-    if(this->front == this->rear){
-        this->arr[this->rear]=0;
-        this->front=-1;
-        this->rear=-1;
-        this->count--;
-    }
-    else{
-        this->arr[this->front]=0;
-        this->front++;
-        this->count--;
-
-    }
-}
-
-void Queue::Display(){
-    for (int i = this->front ; i <= this->rear ; i ++){
-        cout << arr[i] <<" ";
-    }
-    cout << endl;
-}
 
 int main(){
-
     int size;
     int choice;
-    cout <<"Enter size of Queue";
+    cout <<"Enter size of stack" << endl;
     cin  >> size;
+    cin.ignore();
 
-    Queue q1(size);
+    Stack stack(size);
 
      do
     {
-        cout << "Enter 1 to Enque data:" << endl;
-        cout << "Enter 2 to Deque data:" << endl;
-        cout << "Enter 3 to Display data:" << endl;
+        cout << "Enter 1 to insert data:" << endl;
+        cout << "Enter 2 to pop data:" << endl;
+        cout << "Enter 3 to display data:" << endl;
+        cout <<"Enter 4 to check palindrom string:";
         // cout << "Enter 4 to display data:" << endl;
         // cout << "Enter 5 to stack is empty data:" << endl;
         // cout << "Enter 6 to stack is full data:" << endl;
         // cout << "Enter 7 to stack is size data:" << endl;
         // cout << "Enter 8 to reverse tack:" << endl;
         // cout << "Enter 9 to reverse same stack:" << endl;
-        cout << "Enter 0 to exit" << endl;
+        // cout << "Enter 0 to exit" << endl;
         cin >> choice;
 
         switch (choice)
@@ -101,24 +108,46 @@ int main(){
             int data;
             cout << "Enter Data:" << endl;
             cin >> data;
-            q1.Enque(data);
+            stack.push(data);
             break;
         }
         case 2:
         {
-            q1.Deque();
+            stack.pop();
             break;
         }
+        
         case 3:
         {
-            q1.Display();
+            stack.display();
             break;
         }
-        // case 4:
-        // {
-        //     stack.Display();
-        //     break;
-        // }
+        case 4:
+        {
+            string s;
+            Stack palindrome;
+            cout <<"Enter string you want to check palindome:" << endl;
+            cin >>s;
+
+            bool flag = 1;
+
+            for(char val :s){
+                palindrome.push(val);
+            }
+         
+            for(char d: s){
+                if(d != palindrome.Gettop()){
+                    flag = 0;
+                    cout <<"the string is not palindrome:" << endl;
+                    break;
+                }
+                palindrome.pop2();
+            }
+            if(flag == 1){
+                cout <<"Entered String is palindrome:" << endl;
+            }
+            break;
+        }
         // case 8:
         // {
         //     Stack reverse(size);
