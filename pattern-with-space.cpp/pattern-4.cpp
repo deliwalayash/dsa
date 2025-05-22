@@ -9,7 +9,7 @@ int main(){
     for (i=5;i>=1;i--)
     {   
        for (s=i;s<=4;s++){
-        cout << "  "; // in inverted  here use two space
+        cout << " "; // in inverted  here use two space
        }
         for (j=i;j>=1;j--)
         {
