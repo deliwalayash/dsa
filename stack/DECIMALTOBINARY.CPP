@@ -7,7 +7,7 @@ int main(){
 
     stack<int> binary;
     int n;
-
+    
     cout <<"Enter number you want in binary:";
     cin >> n;
 
