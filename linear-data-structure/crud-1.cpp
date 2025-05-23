@@ -66,7 +66,6 @@ class Linkedlist{
         }
         newnode->next=temp->next;
         temp->next=newnode;
-
         this->count++;
 
     }
@@ -81,6 +80,10 @@ class Linkedlist{
         }
         cout << "NULL";
         cout << endl;
+        
+    }
+
+    void DeleteAtStart(){
         
     }
 
@@ -119,7 +122,7 @@ int main(){
     case 2:
         {
             int data;
-            cout <<"Enetr data:";
+            cout <<"Enter data:";
             cin >> data;
             List.addatend(data);
             cout <<"Data Entered Successfully:" << endl;
