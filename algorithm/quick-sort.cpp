@@ -16,9 +16,9 @@ int main(){
         arr[i] = rand() % 100;
     }
 
- display(arr);
- quickSort(arr, 0, n - 1);
- display(arr);
+        display(arr);
+        quickSort(arr, 0, n - 1);
+        display(arr);
 return 0;
 }
 void quickSort(vector<int>&arr, int start,int end){
