@@ -73,47 +73,8 @@ void Queue::Display(){
 
 int main(){
 
-    int size;
-    int choice;
-    cout <<"Enter size of Queue";
-    cin  >> size;
-
-    Queue q1(size);
-
-     do
-    {
-        cout << "Enter 1 to Enque data:" << endl;
-        cout << "Enter 2 to Deque data:" << endl;
-        cout << "Enter 3 to Display data:" << endl;
-        // cout << "Enter 4 to display data:" << endl;
-        // cout << "Enter 5 to stack is empty data:" << endl;
-        // cout << "Enter 6 to stack is full data:" << endl;
-        // cout << "Enter 7 to stack is size data:" << endl;
-        // cout << "Enter 8 to reverse tack:" << endl;
-        // cout << "Enter 9 to reverse same stack:" << endl;
-        cout << "Enter 0 to exit" << endl;
-        cin >> choice;
-
-        switch (choice)
-        {
-        case 1:
-        {
-            int data;
-            cout << "Enter Data:" << endl;
-            cin >> data;
-            q1.Enque(data);
-            break;
-        }
-        case 2:
-        {
-            q1.Deque();
-            break;
-        }
-        case 3:
-        {
-            q1.Display();
-            break;
-        }
+   
+    
         // case 4:
         // {
         //     stack.Display();

@@ -22,7 +22,5 @@ int main(){
         c.pop();
     }
     
-
-
     return 0;
 }

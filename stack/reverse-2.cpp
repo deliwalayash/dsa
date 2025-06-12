@@ -15,10 +15,15 @@ int main() {
     }
 
     cout << "Reversed number is: ";
-    while(!s.empty()) {
-        cout << s.top();
+
+    for(char d : num){
+        cout <<s.top();
         s.pop();
     }
+    // while(!s.empty()) {  //both are same
+    //     cout << s.top();
+    //     s.pop();
+    // }
 
     cout << endl;
     return 0;

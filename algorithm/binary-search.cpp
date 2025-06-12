@@ -2,9 +2,6 @@
 #include<vector>
 
 using namespace std;
-
-
-
 void bubblesort(vector<int> &arr,int);
 int binarySearch(vector<int> &arr,int,int,int);
 int main(){
